@@ -1,0 +1,243 @@
+/* YouTube Page Stylesheet */
+
+.youtube-hero {
+  padding: 80px 0 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.08), transparent 70%);
+  z-index: 1;
+}
+
+.youtube-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Channel Spotlight Banner */
+.channel-spotlight-section {
+  padding: 40px 0;
+}
+
+.channel-banner-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.channel-banner-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: rgba(239, 68, 68, 0.06);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.channel-info-left {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.channel-avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #EF4444, #F43F5E);
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.25);
+  flex-shrink: 0;
+}
+
+.channel-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface-card);
+  background: #FFF;
+}
+
+.channel-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.channel-tag-pill {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.channel-details h2 {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.channel-details p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 500px;
+}
+
+.channel-action-right {
+  flex-shrink: 0;
+}
+
+/* Video Showcase Grid */
+.videos-grid-section {
+  padding: 40px 0 80px 0;
+}
+
+.section-subtitle-row {
+  margin-bottom: 32px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.video-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  background: #000;
+}
+
+.video-iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.video-card-body h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.video-card-body p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.video-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.video-tags span {
+  background: var(--primary-glow);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1100px) {
+  .channel-banner-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px;
+    gap: 28px;
+  }
+  
+  .channel-action-right {
+    width: 100%;
+  }
+  
+  .channel-action-right .yt-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .channel-info-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .channel-details h2 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,546 @@
+/* -------------------------------------------------------------
+   ABOUT PAGE SPECIFIC STYLES (Tharun R Portfolio)
+   Maintains the responsive elegant educational timelines & credentials
+   ------------------------------------------------------------- */
+
+/* About Layout Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Profile Left Panel */
+.about-profile {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px 30px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: sticky;
+  top: 24px;
+}
+
+.about-avatar-card {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-avatar-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px dashed var(--primary);
+  animation: rotateClockwise 25s infinite linear;
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.about-avatar-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0.15;
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
+  z-index: 1;
+}
+
+.about-quick-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px 0;
+}
+
+.quick-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.quick-info-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.quick-info-item span {
+  word-break: break-all;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* About Content Right Panel */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-bio {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-bio h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.about-bio p {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.about-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Education TIMELINE Specifics */
+.education-block {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.education-block h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 30px;
+}
+
+.edu-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.edu-item {
+  position: relative;
+  padding-left: 24px;
+}
+
+.edu-dot {
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--surface-base);
+  border: 3px solid var(--border-color);
+}
+
+.edu-dot-primary { border-color: var(--primary); }
+.edu-dot-accent { border-color: var(--secondary); }
+.edu-dot-muted { border-color: var(--text-light); }
+
+.edu-degree {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.edu-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.edu-year {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--bg-app);
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.edu-cgpa {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Achievements Section */
+.achievements-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+}
+
+.achievement-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.achieve-group-title {
+  font-size: 1.35rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.achieve-icon {
+  font-size: 1.5rem;
+}
+
+.achieve-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.achieve-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition-normal);
+}
+
+.achieve-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.achieve-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.achieve-rank {
+  font-size: 1.6rem;
+}
+
+.achieve-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.achieve-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.achieve-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.achieve-badge.gold { background: rgba(252, 211, 77, 0.15); color: #B45309; }
+.achieve-badge.blue { background: var(--primary-glow); color: var(--primary); }
+.achieve-badge.purple { background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); }
+.achieve-badge.green { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
+
+.highlight-card-gold {
+  border-color: rgba(251, 191, 36, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.08) !important;
+}
+
+/* Certifications Grid */
+.certs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition-normal);
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(68, 82, 254, 0.08);
+}
+
+.cert-icon {
+  font-size: 1.8rem;
+}
+
+.cert-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.cert-issuer {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-glow);
+  padding: 3px 10px;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-profile {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* YouTube Channel Section */
+.youtube-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border-color);
+  background: linear-gradient(180deg, transparent, var(--bg-app));
+}
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.youtube-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+}
+
+.yt-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: #EF4444; /* YouTube Red */
+  font-size: 1.1rem;
+}
+
+.yt-logo-badge svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.youtube-card h3 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.youtube-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.yt-stats {
+  display: flex;
+  gap: 30px;
+  margin: 10px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 0;
+}
+
+.yt-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.yt-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text-main);
+}
+
+.yt-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.yt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #EF4444;
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+}
+
+.yt-btn:hover {
+  background: #DC2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* Video Wrapper */
+.youtube-video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  background: #000;
+}
+
+.youtube-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 992px) {
+  .youtube-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .youtube-card {
+    padding: 30px;
+  }
+}
+
