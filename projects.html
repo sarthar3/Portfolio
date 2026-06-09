@@ -75,6 +75,7 @@
           <button class="filter-btn" data-filter="devops" id="filter-devops">DevOps / Cloud</button>
           <button class="filter-btn" data-filter="fullstack" id="filter-fullstack">Full-Stack</button>
           <button class="filter-btn" data-filter="data" id="filter-data">Data</button>
+          <button class="filter-btn" data-filter="security" id="filter-security">Security</button>
         </div>
       </div>
     </section>
@@ -108,12 +109,41 @@
               </ul>
             </div>
             <div class="project-card-footer">
-              <a href="https://github.com/sarthar3" target="_blank" class="proj-link" id="proj-codesentinel-gh">GitHub →</a>
+              <a href="https://github.com/sarthar3/CodeSentinel-DP" target="_blank" class="proj-link" id="proj-codesentinel-gh">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- NexusGuard-AI -->
+          <div class="project-card animate-fade-up" data-tags="ai security" id="nexusguard" style="animation-delay:.1s">
+            <div class="project-card-header" style="position:relative;">
+              <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ef4444,#dc2626);"></div>
+              <div class="project-card-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <div class="project-card-badges">
+                <span class="proj-badge">AI Security</span>
+                <span class="proj-badge">SDN / Network</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <h3>NexusGuard-AI</h3>
+              <p>Autonomous AI-Driven Intrusion Detection and Mitigation System (IDS) for Software-Defined Networks (SDN). Uses ML/DL models to detect network anomalies and automatically respond to threats in real-time.</p>
+              <div class="project-tech">
+                <span>Python</span><span>Mininet</span><span>Ryu SDN</span><span>Machine Learning</span><span>Deep Learning</span><span>Network Security</span>
+              </div>
+              <ul class="project-bullets">
+                <li>Autonomous threat detection and mitigation in SDN environments</li>
+                <li>ML-based anomaly detection with real-time network response</li>
+                <li>Mininet + Ryu controller integration for network simulation</li>
+              </ul>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/sarthar3/NexusGuard-AI" target="_blank" class="proj-link" id="proj-nexusguard-gh">GitHub →</a>
             </div>
           </div>
 
           <!-- CI/CD Pipeline -->
-          <div class="project-card animate-fade-up" data-tags="devops" id="cicd" style="animation-delay:.1s">
+          <div class="project-card animate-fade-up" data-tags="devops" id="cicd" style="animation-delay:.15s">
             <div class="project-card-header cyan-grad">
               <div class="project-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
@@ -136,12 +166,40 @@
               </ul>
             </div>
             <div class="project-card-footer">
-              <a href="https://github.com/sarthar3" target="_blank" class="proj-link" id="proj-cicd-gh">GitHub →</a>
+              <a href="https://github.com/sarthar3/Cloud-DevOps-CI-CD" target="_blank" class="proj-link" id="proj-cicd-gh">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- RocDoc -->
+          <div class="project-card animate-fade-up" data-tags="ai fullstack" id="rocdoc" style="animation-delay:.2s">
+            <div class="project-card-header indigo-grad">
+              <div class="project-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div class="project-card-badges">
+                <span class="proj-badge">RAG AI</span>
+                <span class="proj-badge">AMD Hackathon</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <h3>RocDoc — Private AI Document Assistant</h3>
+              <p>Private AI document assistant built for the AMD x LabLab.ai Hackathon. Upload PDFs, Markdown and text files, ask natural language questions, receive citation-grounded responses with live AMD GPU telemetry.</p>
+              <div class="project-tech">
+                <span>FastAPI</span><span>Next.js</span><span>ChromaDB</span><span>PyTorch</span><span>Groq API</span><span>RAG</span><span>WebSockets</span>
+              </div>
+              <ul class="project-bullets">
+                <li>Real-time AMD GPU telemetry dashboard via WebSockets</li>
+                <li>Ephemeral session management with citation-grounded RAG</li>
+                <li>Stable split-stack deployment on Render platform</li>
+              </ul>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/sarthar3/RocDoc" target="_blank" class="proj-link" id="proj-rocdoc-gh">GitHub →</a>
             </div>
           </div>
 
           <!-- Virtual Try-On -->
-          <div class="project-card animate-fade-up" data-tags="fullstack" id="tryon" style="animation-delay:.2s">
+          <div class="project-card animate-fade-up" data-tags="fullstack" id="tryon" style="animation-delay:.25s">
             <div class="project-card-header pink-grad">
               <div class="project-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -164,12 +222,40 @@
               </ul>
             </div>
             <div class="project-card-footer">
-              <a href="https://github.com/sarthar3" target="_blank" class="proj-link" id="proj-tryon-gh">GitHub →</a>
+              <a href="https://github.com/sarthar3/Virtual-Try-On-AR" target="_blank" class="proj-link" id="proj-tryon-gh">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- NLP-based-Projects -->
+          <div class="project-card animate-fade-up" data-tags="ai data" id="nlp-projects" style="animation-delay:.3s">
+            <div class="project-card-header orange-grad">
+              <div class="project-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="project-card-badges">
+                <span class="proj-badge">NLP</span>
+                <span class="proj-badge">3 Tools</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <h3>NLP-based Projects (3-in-1)</h3>
+              <p>Collection of 3 NLP tools: Medical Notes Classifier (clinical categorization), Financial News Summarizer (market sentiment), and Contract Details Segregator (legal clause extraction).</p>
+              <div class="project-tech">
+                <span>Python</span><span>NLP</span><span>Transformers</span><span>Scikit-learn</span><span>NLTK</span><span>Hugging Face</span>
+              </div>
+              <ul class="project-bullets">
+                <li>Medical Notes Classifier with multi-label classification</li>
+                <li>Financial News Summarizer with sentiment analysis</li>
+                <li>Contract Details Segregator for legal document parsing</li>
+              </ul>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/sarthar3/NLP-based-Projects" target="_blank" class="proj-link" id="proj-nlp-gh">GitHub →</a>
             </div>
           </div>
 
           <!-- Animal Disease Prediction -->
-          <div class="project-card animate-fade-up" data-tags="ai" id="animal-disease" style="animation-delay:.3s">
+          <div class="project-card animate-fade-up" data-tags="ai" id="animal-disease" style="animation-delay:.35s">
             <div class="project-card-header green-grad">
               <div class="project-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -192,40 +278,12 @@
               </ul>
             </div>
             <div class="project-card-footer">
-              <a href="https://github.com/sarthar3" target="_blank" class="proj-link" id="proj-animal-gh">GitHub →</a>
+              <a href="https://github.com/sarthar3/Animal-Disease-Prediction" target="_blank" class="proj-link" id="proj-animal-gh">GitHub →</a>
             </div>
           </div>
 
-          <!-- Resume Checker -->
-          <div class="project-card animate-fade-up" data-tags="ai data" id="resume-checker" style="animation-delay:.4s">
-            <div class="project-card-header orange-grad">
-              <div class="project-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              </div>
-              <div class="project-card-badges">
-                <span class="proj-badge">NLP</span>
-                <span class="proj-badge">OpenAI</span>
-              </div>
-            </div>
-            <div class="project-card-body">
-              <h3>Resume Checker using NLP & OpenAI</h3>
-              <p>AI-powered resume evaluation system that extracts and matches keywords from resumes against job descriptions to calculate relevance scores using NLP and OpenAI API.</p>
-              <div class="project-tech">
-                <span>Python</span><span>NLP</span><span>Scikit-learn</span><span>OpenAI API</span>
-              </div>
-              <ul class="project-bullets">
-                <li>Keyword extraction and JD-resume relevance scoring</li>
-                <li>NLP pipeline for semantic matching</li>
-                <li>OpenAI-powered feedback generation</li>
-              </ul>
-            </div>
-            <div class="project-card-footer">
-              <a href="https://github.com/sarthar3" target="_blank" class="proj-link" id="proj-resume-gh">GitHub →</a>
-            </div>
-          </div>
-
-          <!-- EDA Tool -->
-          <div class="project-card animate-fade-up" data-tags="data" id="eda-tool" style="animation-delay:.5s">
+          <!-- Exploratory Data Analytics -->
+          <div class="project-card animate-fade-up" data-tags="data" id="eda-tool" style="animation-delay:.4s">
             <div class="project-card-header purple-grad">
               <div class="project-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>

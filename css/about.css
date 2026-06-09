@@ -392,7 +392,59 @@
   .achievements-grid {
     grid-template-columns: 1fr;
   }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-profile {
+    position: static;
+    padding: 28px 20px;
+  }
+
+  .about-bio {
+    padding: 24px 20px;
+  }
+
+  .about-bio h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-block {
+    padding: 24px 20px;
+  }
+
+  .education-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .achieve-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .achieve-badge {
+    align-self: flex-start;
+  }
 }
+
+@media (max-width: 480px) {
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card {
+    padding: 16px;
+  }
+}
+
 
 /* YouTube Channel Section */
 .youtube-section {

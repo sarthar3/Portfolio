@@ -828,3 +828,89 @@
     display: none; /* Hide cluster on very small devices for readability */
   }
 }
+
+/* Mobile-specific home page fixes */
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 36px 20px;
+    gap: 32px;
+    min-height: unset;
+  }
+
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-badge, .hero-roles {
+    align-self: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-roles {
+    font-size: 1.3rem;
+    height: 32px;
+  }
+
+  .role-carousel {
+    min-width: 240px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-cta .btn-primary,
+  .hero-cta .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .hero-card-cluster {
+    width: 280px;
+    height: 280px;
+  }
+
+  .featured-projects {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .feat-project-card {
+    min-height: unset;
+    padding: 22px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hackathon-banner {
+    padding: 22px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hackathon-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .hbadge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+}
